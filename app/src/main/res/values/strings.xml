@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">qrscanner</string>
+    <string name="title_history">History</string>
+    <string name="title_scanner">Scanner</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
