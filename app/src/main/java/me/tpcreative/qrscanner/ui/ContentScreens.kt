@@ -35,7 +35,7 @@ fun ScanScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun SCanScreenPreview() {
+fun ScanScreenPreview() {
     ScanScreen()
 }
 
