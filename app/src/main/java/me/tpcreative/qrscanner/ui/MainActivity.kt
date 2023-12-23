@@ -60,21 +60,18 @@ fun MainScreenPreview() {
 
 @Composable
 fun Navigation(navController: NavHostController) {
-    NavHost(navController, startDestination = NavigationItem.Home.route) {
-        composable(NavigationItem.Home.route) {
-            HomeScreen()
+    NavHost(navController, startDestination = NavigationItem.Scan.route) {
+        composable(NavigationItem.Scan.route) {
+            ScanScreen()
         }
-        composable(NavigationItem.Music.route) {
-            MusicScreen()
+        composable(NavigationItem.History.route) {
+            HistoryScreen()
         }
-        composable(NavigationItem.Movies.route) {
-            MoviesScreen()
+        composable(NavigationItem.MyCodes.route) {
+            MyCodesScreen()
         }
-        composable(NavigationItem.Books.route) {
-            BooksScreen()
-        }
-        composable(NavigationItem.Profile.route) {
-            ProfileScreen()
+        composable(NavigationItem.Settings.route) {
+            SettingsScreen()
         }
     }
 }
@@ -97,11 +94,10 @@ fun TopBarPreview() {
 @Composable
 fun BottomNavigationBar(navController: NavController) {
     val items = listOf(
-        NavigationItem.Home,
-        NavigationItem.Music,
-        NavigationItem.Movies,
-        NavigationItem.Books,
-        NavigationItem.Profile
+        NavigationItem.Scan,
+        NavigationItem.History,
+        NavigationItem.MyCodes,
+        NavigationItem.Settings,
     )
     BottomNavigation(
         backgroundColor = colorResource(id = R.color.colorPrimary),

@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.sp
 import me.tpcreative.qrscanner.R
 
 @Composable
-fun HomeScreen() {
+fun ScanScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -23,7 +23,7 @@ fun HomeScreen() {
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
-            text = "Home View",
+            text = "Scan View",
             fontWeight = FontWeight.Bold,
             color = Color.White,
             modifier = Modifier.align(Alignment.CenterHorizontally),
@@ -35,12 +35,12 @@ fun HomeScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun HomeScreenPreview() {
-    HomeScreen()
+fun SCanScreenPreview() {
+    ScanScreen()
 }
 
 @Composable
-fun MusicScreen() {
+fun HistoryScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -48,7 +48,7 @@ fun MusicScreen() {
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
-            text = "Music View",
+            text = "History View",
             fontWeight = FontWeight.Bold,
             color = Color.White,
             modifier = Modifier.align(Alignment.CenterHorizontally),
@@ -60,12 +60,12 @@ fun MusicScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun MusicScreenPreview() {
-    MusicScreen()
+fun HistoryScreenPreview() {
+    HistoryScreen()
 }
 
 @Composable
-fun MoviesScreen() {
+fun MyCodesScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -73,7 +73,7 @@ fun MoviesScreen() {
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
-            text = "Movies View",
+            text = "My Codes View",
             fontWeight = FontWeight.Bold,
             color = Color.White,
             modifier = Modifier.align(Alignment.CenterHorizontally),
@@ -85,13 +85,13 @@ fun MoviesScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun MoviesScreenPreview() {
-    MoviesScreen()
+fun MyCodesScreenPreview() {
+    MyCodesScreen()
 }
 
 
 @Composable
-fun BooksScreen() {
+fun SettingsScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -99,7 +99,7 @@ fun BooksScreen() {
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
-            text = "Books View",
+            text = "Settings View",
             fontWeight = FontWeight.Bold,
             color = Color.White,
             modifier = Modifier.align(Alignment.CenterHorizontally),
@@ -111,31 +111,6 @@ fun BooksScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun BooksScreenPreview() {
-    BooksScreen()
-}
-
-@Composable
-fun ProfileScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(colorResource(id = R.color.colorPrimaryDark))
-            .wrapContentSize(Alignment.Center)
-    ) {
-        Text(
-            text = "Profile View",
-            fontWeight = FontWeight.Bold,
-            color = Color.White,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-            fontSize = 25.sp
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun ProfileScreenPreview() {
-    ProfileScreen()
+fun SettingsScreenPreview() {
+    SettingsScreen()
 }

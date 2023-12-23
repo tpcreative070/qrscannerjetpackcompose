@@ -3,9 +3,8 @@ package me.tpcreative.qrscanner.ui
 import me.tpcreative.qrscanner.R
 
 sealed class NavigationItem(var route: String, var icon: Int, var title: String) {
-    object Home : NavigationItem("home", R.drawable.ic_home, "Home")
-    object Music : NavigationItem("music", R.drawable.ic_music, "Music")
-    object Movies : NavigationItem("movies", R.drawable.ic_movie, "Movies")
-    object Books : NavigationItem("books", R.drawable.ic_book, "Books")
-    object Profile : NavigationItem("profile", R.drawable.ic_profile, "Profile")
+    object Scan : NavigationItem("Scan", R.drawable.ic_qr_code_scanner, "Scan")
+    object History : NavigationItem("music", R.drawable.ic_history, "History")
+    object MyCodes : NavigationItem("movies", R.drawable.ic_qr_code, "My codes")
+    object Settings : NavigationItem("books", R.drawable.ic_settings, "Settings")
 }
