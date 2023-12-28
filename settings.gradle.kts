@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "qrscanner"
 include(":app")
+include("ComposePrefs")
