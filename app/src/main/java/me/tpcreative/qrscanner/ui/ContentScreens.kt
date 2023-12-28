@@ -6,6 +6,8 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Vibration
+import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -16,7 +18,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.alorma.compose.settings.storage.base.rememberBooleanSettingState
-import com.alorma.compose.settings.ui.SettingsCheckbox
 import com.alorma.compose.settings.ui.SettingsSwitch
 import me.tpcreative.qrscanner.R
 
@@ -109,11 +110,13 @@ fun SettingsScreen() {
             SettingsSwitch(
                 state = stateSound,
                 title = { Text(text = "Sound") },
+                icon = { Icon(imageVector = Icons.Default.VolumeUp, contentDescription = "Sound") },
                 onCheckedChange = { newValue -> },
             )
             SettingsSwitch(
                 state = stateVibrate,
                 title = { Text(text = "Vibrate") },
+                icon = { Icon(imageVector = Icons.Default.Vibration, contentDescription = "Vibrate") },
                 onCheckedChange = { newValue -> },
             )
         }

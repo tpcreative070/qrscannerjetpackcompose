@@ -62,6 +62,7 @@ dependencies {
     implementation ("androidx.activity:activity-compose:1.7.2")
     implementation ("com.github.alorma:compose-settings-ui:1.0.3")
     implementation ("com.github.alorma:compose-settings-storage-preferences:1.0.3")
+    implementation ("androidx.compose.material:material-icons-extended:1.4.3")
 
     implementation(libs.androidx.camera.camera2)
     implementation(libs.androidx.camera.lifecycle)
