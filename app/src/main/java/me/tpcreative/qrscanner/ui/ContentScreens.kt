@@ -2,7 +2,10 @@ package me.tpcreative.qrscanner.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Icon
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -12,6 +15,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import com.alorma.compose.settings.storage.base.rememberBooleanSettingState
+import com.alorma.compose.settings.ui.SettingsCheckbox
+import com.alorma.compose.settings.ui.SettingsSwitch
 import me.tpcreative.qrscanner.R
 
 @Composable
@@ -89,23 +95,28 @@ fun MyCodesScreenPreview() {
     MyCodesScreen()
 }
 
-
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun SettingsScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(colorResource(id = R.color.colorPrimaryDark))
-            .wrapContentSize(Alignment.Center)
-    ) {
-        Text(
-            text = "Settings View",
-            fontWeight = FontWeight.Bold,
-            color = Color.White,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-            fontSize = 25.sp
-        )
+    val stateSound = rememberBooleanSettingState()
+    val stateVibrate = rememberBooleanSettingState()
+    Scaffold { padding ->
+        Column(
+            modifier = Modifier
+                .consumeWindowInsets(padding)
+                .padding(top = padding.calculateTopPadding()),
+        ) {
+            SettingsSwitch(
+                state = stateSound,
+                title = { Text(text = "Sound") },
+                onCheckedChange = { newValue -> },
+            )
+            SettingsSwitch(
+                state = stateVibrate,
+                title = { Text(text = "Vibrate") },
+                onCheckedChange = { newValue -> },
+            )
+        }
     }
 }
 
